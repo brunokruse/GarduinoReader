@@ -1,4 +1,4 @@
-GarduinoDemo
+GarduinoReader
 ============
 
 Biomodd Mixed Reality Prototype
