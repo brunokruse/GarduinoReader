@@ -55,7 +55,7 @@ void setup() {
 }
 void loop() {
   
-  Serial.println( "-" );                          
+  Serial.println();                          
   
   // read the values from each of our sensors
   readMoistureSensor();
@@ -81,6 +81,8 @@ void loop() {
   Serial.println( proportion_lit);
   delay(1000);
   */
+  
+  delay(500);
 
 }
 
@@ -90,25 +92,28 @@ void loop() {
 void readMoistureSensor() {
   // read the value from the moisture-sensing probes, print it to screen, and wait a second
   moisture_val = analogRead(moistureSensor);
-  Serial.print("moisture sensor reads ");
-  Serial.println( moisture_val );
-  delay(250);
+  //Serial.print("moisture sensor reads ");
+  Serial.print(moisture_val, DEC);
+  Serial.print(",");
+  //delay(250);
 }
 
 void readLightSensor() {
   // read the value from the photosensor, print it to screen, and wait a second
-  light_val = analogRead(lightSensor);
-  Serial.print("light sensor reads ");
-  Serial.println( light_val );
-  delay(250); 
+    light_val = analogRead(lightSensor);
+
+  Serial.print(light_val, DEC);
+  Serial.print(",");
+  //delay(250); 
 }
 
-void readTempSensor() {
+void readTempSensor() {  
   // read the value from the temperature sensor, print it to screen, and wait a second
   temp_val = analogRead(tempSensor);
-  Serial.print("temp sensor reads ");
-  Serial.println( temp_val );
-  delay(250);
+  //Serial.print("temp sensor reads ");
+  Serial.print(temp_val, DEC);
+  //Serial.print(",");
+  //delay(250);
 }
 
 
